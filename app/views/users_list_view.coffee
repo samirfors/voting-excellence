@@ -9,7 +9,3 @@ module.exports = class UsersListView extends CollectionView
   RenderItems: true
   animationDuration: 100
   tagName: 'ul'
-
-  initialize: ->
-    super
-    console.log ['users-list-view', @collection]
