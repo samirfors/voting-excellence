@@ -9,6 +9,7 @@ module.exports = class HomeController extends Controller
   historyURL: 'home'
 
   index: ->
+    $('.container').html ''
     @title = 'User list'
     @users = new UsersCollection()
     @view = new HomePageView collection: @users
@@ -19,9 +20,9 @@ module.exports = class HomeController extends Controller
     @publishEvent '!router:changeURL', '/products'
 
   products: ->
+    $('.container').html ''
     if mediator.user is null then @publishEvent '!router:route', '' else
       @title = 'Product list'
       @products = new ProductsCollection()
       @view = new ProductsView
         collection: @products
-        userId: mediator.user

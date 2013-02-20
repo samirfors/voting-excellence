@@ -10,7 +10,6 @@ module.exports = class ProductsView extends View
 
   initialize: (options) ->
     super
-    console.log ['userid from product-page', options.userId]
     @on 'addedToDOM', @renderSubviews
 
   renderSubviews: ->

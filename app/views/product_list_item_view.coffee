@@ -5,3 +5,7 @@ module.exports = class ProductListItemView extends View
   template: template
   className: 'product-list-item'
   tagName: 'li'
+
+  initialize: ->
+    super
+    @model.on 'change', @render
