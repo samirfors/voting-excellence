@@ -1,20 +1,27 @@
 Controller = require 'controllers/base/controller'
+UsersCollection = require 'models/users'
 HomePageView = require 'views/home_page_view'
 mediator = require 'mediator'
+ProductsView = require 'views/products_view'
+ProductsCollection = require 'models/products'
 
 module.exports = class HomeController extends Controller
   historyURL: 'home'
 
   index: ->
     @title = 'User list'
-    @view = new HomePageView()
+    @users = new UsersCollection()
+    @view = new HomePageView collection: @users
 
   setuser: (params) ->
     mediator.user = params.id
-    console.log ['bajs']
     @publishEvent '!router:route', '/products'
     @publishEvent '!router:changeURL', '/products'
 
   products: ->
-    if mediator.user is null then @publishEvent '!router:route', ''
-    console.log ['gimmie some products', mediator.user]
+    if mediator.user is null then @publishEvent '!router:route', '' else
+      @title = 'Product list'
+      @products = new ProductsCollection()
+      @view = new ProductsView
+        collection: @products
+        userId: mediator.user

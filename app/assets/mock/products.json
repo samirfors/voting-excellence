@@ -1,0 +1,4 @@
+[
+{"id":45, "name": "Ping pong table", "description": "A ping pong table is sooo nice", "price": 500000, "allocated": 35000, "max_units": 1, "url": "http://www.pingpng.net", "picture_url":"http://pingpongpic.png", "timestamp": 1361362283},
+{"id":47, "name": "club mate", "description": "energy drink!", "price": 500000, "allocated": 35000, "max_units": 1, "url": "http://www.pingpng.net", "picture_url":"http://pingpongpic.png", "timestamp": 1361361283}
+]
