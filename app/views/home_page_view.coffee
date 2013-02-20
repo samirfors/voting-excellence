@@ -1,6 +1,5 @@
 View = require 'views/base/view'
 template = require 'views/templates/home_page'
-UsersCollection = require 'models/users'
 UsersListView = require 'views/users_list_view'
 
 module.exports = class HomePageView extends View
@@ -14,5 +13,4 @@ module.exports = class HomePageView extends View
     @on 'addedToDOM', @renderSubviews
 
   renderSubviews: ->
-    @collection = new UsersCollection()
     @view = new UsersListView collection: @collection

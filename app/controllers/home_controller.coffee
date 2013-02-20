@@ -1,4 +1,5 @@
 Controller = require 'controllers/base/controller'
+UsersCollection = require 'models/users'
 HomePageView = require 'views/home_page_view'
 
 module.exports = class HomeController extends Controller
@@ -6,5 +7,5 @@ module.exports = class HomeController extends Controller
 
   index: ->
     @title = 'User list'
-    @view = new HomePageView()
-
+    @users = new UsersCollection()
+    @view = new HomePageView collection: @users
