@@ -7,8 +7,6 @@ module.exports = class Users extends Collection
   url: '/mock/users.json'
 
   initialize: ->
-    console.log 'init users'
-
     @fetch
       success: (c, r, o) ->
         console.log ['success', c, r, o]
