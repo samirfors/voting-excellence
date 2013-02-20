@@ -1,0 +1,4 @@
+[
+  {"id":1, "email": "andreas@campanja.com", "name": "Andreas Amsenius", "budget": 3500, "is_admin": false},
+  {"id":2, "email": "andreas@campanja.com", "name": "Andreas Amsenius", "budget": 3500, "is_admin": false}
+]
