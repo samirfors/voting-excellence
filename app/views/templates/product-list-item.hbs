@@ -1,8 +1,28 @@
-<h1><a href="{{url}}">{{name}}</a></h1>
+<h3><a href="{{url}}">{{name}}</a></h3>
 <img src="{{picture_url}}"/>
-<p>Price: {{price}}</p>
-<p>{{decription}}</p>
-<p>allocated: {{allocated}}</p>
-<p>max_units: {{max_units}}</p>
-<p>Added {{timestamp}}</p>
-<input type="text" value="{{user_allocated}}"/>
+<div class="desc">
+  <table>
+    <tr>
+      <td>Price:</td>
+      <td>{{price}}</td>
+    </tr>
+      <td>Description:</td>
+      <td>{{description}}</td>
+    </tr>
+    <tr>
+      <td>Allocated:</td>
+      <td>{{allocated}}</td>
+    </tr>
+    <tr>
+      <td>Max units:</td>
+      <td>{{max_units}}</td>
+    </tr>
+      <td>Added:</td>
+      <td>{{timestamp}}</td>
+    </tr>
+    <tr>
+      <td>Allocated by me:</td>
+      <td><input type="text" value="{{user_allocated}}"></td>
+    </tr>
+  </table>
+</div>
